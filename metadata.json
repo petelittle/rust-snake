@@ -1,0 +1,6 @@
+{
+  "name": "Vipera Bevy — Rust & Bevy Snake",
+  "description": "High-performance 60fps Snake game engineered with an ECS fixed-timestep architecture, sub-tick visual interpolation, procedural audio, and complete Rust + Bevy 0.15 source.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

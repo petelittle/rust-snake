@@ -1,0 +1,21 @@
+[package]
+name = "vipera_bevy"
+version = "0.1.0"
+edition = "2021"
+description = "High-performance Snake game built on Rust and the Bevy ECS engine"
+
+[dependencies]
+bevy = "0.15"
+rand = "0.8"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+opt-level = 3
+strip = "symbols"
