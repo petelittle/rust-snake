@@ -366,7 +366,8 @@ export default function App() {
   }, [handleSteer, startGame, toggleMute, togglePause]);
 
   return (
-    <main className="relative h-full w-full overflow-hidden bg-[#090c11] select-none">
+    <main className="relative flex h-full w-full flex-col overflow-hidden bg-[#090c11] select-none">
+      <div className="relative min-h-0 w-full flex-1">
       <div
         ref={containerRef}
         className="h-full w-full"
@@ -429,6 +430,16 @@ export default function App() {
         open={sourceOpen}
         onClose={() => setSourceOpen(false)}
       />
+      </div>
+
+      <footer className="relative flex items-center justify-center border-t border-orange-500/25 bg-[#0b0e14] px-4 py-2.5">
+        <a
+          href="https://techne.livewalk.org/"
+          className="rounded-full bg-orange-600 px-5 py-2 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300"
+        >
+          ← Back to Techne
+        </a>
+      </footer>
     </main>
   );
 }

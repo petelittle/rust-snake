@@ -40,7 +40,7 @@ export function StatusModal({
 
   return (
     <div
-      className="fixed inset-0 z-30 flex items-center justify-center p-4"
+      className="absolute inset-0 z-30 flex items-center justify-center p-4"
       style={{ backgroundColor: 'rgba(9, 12, 17, 0.78)' }}
     >
       <div

@@ -25,7 +25,7 @@ export function TitleOverlay({
 
   return (
     <div
-      className="fixed inset-0 z-20 flex flex-col items-center justify-between px-6 py-6 pointer-events-none"
+      className="absolute inset-0 z-20 flex flex-col items-center justify-between px-6 py-6 pointer-events-none"
       style={{ backgroundColor: 'rgba(9, 12, 17, 0.72)' }}
     >
       <div className="w-full max-w-5xl flex items-center justify-between text-xs text-slate-400">

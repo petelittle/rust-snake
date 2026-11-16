@@ -26,7 +26,7 @@ export function BevySourceModal({ open, onClose }: BevySourceModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-40 flex items-center justify-center p-4 sm:p-6"
+      className="absolute inset-0 z-40 flex items-center justify-center p-4 sm:p-6"
       style={{ backgroundColor: 'rgba(7, 10, 15, 0.86)' }}
     >
       <div

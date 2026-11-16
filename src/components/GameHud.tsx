@@ -23,7 +23,7 @@ export function GameHud({
   if (!showPlayHud) return null;
 
   return (
-    <div className="fixed inset-0 z-10 pointer-events-none flex flex-col justify-between p-3 sm:p-5">
+    <div className="absolute inset-0 z-10 pointer-events-none flex flex-col justify-between p-3 sm:p-5">
       {/* Top Perimeter Clusters */}
       <div className="flex items-start justify-between gap-4">
         {/* Top-Left Readouts */}
