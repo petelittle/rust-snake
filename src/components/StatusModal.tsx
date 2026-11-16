@@ -5,7 +5,6 @@ interface StatusModalProps {
   onResume: () => void;
   onRestart: () => void;
   onReturnTitle: () => void;
-  onOpenSource: () => void;
 }
 
 export function StatusModal({
@@ -13,7 +12,6 @@ export function StatusModal({
   onResume,
   onRestart,
   onReturnTitle,
-  onOpenSource,
 }: StatusModalProps) {
   if (hud.phase !== 'paused' && hud.phase !== 'gameover' && hud.phase !== 'victory') {
     return null;
@@ -128,16 +126,12 @@ export function StatusModal({
             </button>
           </div>
 
-          <button
-            type="button"
-            onClick={(e) => {
-              e.currentTarget.blur();
-              onOpenSource();
-            }}
-            className="min-h-[40px] w-full rounded-lg border border-slate-800 bg-transparent px-4 py-2 text-xs font-medium text-slate-300 whitespace-nowrap shrink-0 transition-colors hover:bg-slate-800/60 hover:text-white cursor-pointer"
+          <a
+            href="https://techne.livewalk.org/"
+            className="flex min-h-[42px] w-full items-center justify-center rounded-lg bg-orange-600 px-4 py-2 text-xs font-semibold text-white whitespace-nowrap shrink-0 transition-colors hover:bg-orange-500 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
           >
-            View Rust + Bevy Source
-          </button>
+            ← Back to Techne
+          </a>
         </div>
       </div>
     </div>

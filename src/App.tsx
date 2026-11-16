@@ -405,7 +405,6 @@ export default function App() {
           bestScore={hud.bestScore}
           onSelectMode={selectMode}
           onStart={() => startGame()}
-          onOpenSource={() => setSourceOpen(true)}
         />
       )}
 
@@ -423,7 +422,6 @@ export default function App() {
         onResume={togglePause}
         onRestart={() => startGame()}
         onReturnTitle={returnToTitle}
-        onOpenSource={() => setSourceOpen(true)}
       />
 
       <BevySourceModal
@@ -432,13 +430,17 @@ export default function App() {
       />
       </div>
 
-      <footer className="relative flex items-center justify-center border-t border-orange-500/25 bg-[#0b0e14] px-4 py-2.5">
-        <a
-          href="https://techne.livewalk.org/"
-          className="rounded-full bg-orange-600 px-5 py-2 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300"
+      <footer className="relative flex items-center justify-center border-t border-emerald-500/25 bg-[#0b0e14] px-4 py-2.5">
+        <button
+          type="button"
+          onClick={(e) => {
+            e.currentTarget.blur();
+            setSourceOpen(true);
+          }}
+          className="rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-emerald-500 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300"
         >
-          ← Back to Techne
-        </a>
+          View Rust + Bevy Source
+        </button>
       </footer>
     </main>
   );

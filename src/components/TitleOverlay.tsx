@@ -5,7 +5,6 @@ interface TitleOverlayProps {
   bestScore: number;
   onSelectMode: (mode: GameMode) => void;
   onStart: () => void;
-  onOpenSource: () => void;
 }
 
 const MODE_OPTIONS: { id: GameMode; label: string; detail: string }[] = [
@@ -19,7 +18,6 @@ export function TitleOverlay({
   bestScore,
   onSelectMode,
   onStart,
-  onOpenSource,
 }: TitleOverlayProps) {
   const activeMode = MODE_OPTIONS.find((m) => m.id === mode) ?? MODE_OPTIONS[0];
 
@@ -117,16 +115,12 @@ export function TitleOverlay({
           >
             Start Game
           </button>
-          <button
-            type="button"
-            onClick={(e) => {
-              e.currentTarget.blur();
-              onOpenSource();
-            }}
-            className="min-h-[42px] w-full rounded-lg border border-slate-700 bg-slate-900 px-5 py-2.5 text-xs font-medium text-slate-200 whitespace-nowrap shrink-0 transition-colors hover:bg-slate-800 hover:text-white cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+          <a
+            href="https://techne.livewalk.org/"
+            className="flex min-h-[42px] w-full items-center justify-center rounded-lg bg-orange-600 px-5 py-2.5 text-xs font-semibold text-white whitespace-nowrap shrink-0 transition-colors hover:bg-orange-500 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
           >
-            View Rust + Bevy Source
-          </button>
+            ← Back to Techne
+          </a>
         </div>
       </div>
 
