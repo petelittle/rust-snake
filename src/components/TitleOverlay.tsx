@@ -117,9 +117,9 @@ export function TitleOverlay({
           </button>
           <a
             href="https://techne.livewalk.org/"
-            className="flex min-h-[42px] w-full items-center justify-center rounded-lg bg-orange-600 px-5 py-2.5 text-xs font-semibold text-white whitespace-nowrap shrink-0 transition-colors hover:bg-orange-500 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
+            className="flex min-h-[44px] w-full items-center justify-center rounded-lg bg-pink-600 px-5 py-3 text-sm font-semibold text-white whitespace-nowrap shrink-0 transition-colors hover:bg-pink-500 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400"
           >
-            ← Back to Techne
+            ← Back to techne.livewalk.org
           </a>
         </div>
       </div>
